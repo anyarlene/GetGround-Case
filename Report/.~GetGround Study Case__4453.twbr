@@ -1,0 +1,2566 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20214.21.1217.2252                               -->
+<workbook original-version='18.1' source-build='2021.4.2 (20214.21.1217.2252)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Top Partner Companies' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='10'>
+        <calculation class='tableau' formula='10' />
+        <range granularity='5' max='20' min='5' />
+      </column>
+      <column caption='Top Partner Referrals' datatype='integer' name='[Top Partner Companies (copy)]' param-domain-type='range' role='measure' type='quantitative' value='10'>
+        <calculation class='tableau' formula='10' />
+        <range granularity='5' max='20' min='5' />
+      </column>
+    </datasource>
+    <datasource caption='Partners (GetGround2)' inline='true' name='federated.0dwbmxi0rnbxpj1c8sffh0q710xc' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='BigQuery' name='bigquery.02817jk0nkmett185261j15dfdir'>
+            <connection CATALOG='load-data-bq-329707' EXECCATALOG='load-data-bq-329707' authentication='oauth' class='bigquery' connection-dialect='google-sql' project='load-data-bq' schema='GetGround2' server-oauth='' username='qf.mugisha@gmail.com' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='bigquery.02817jk0nkmett185261j15dfdir' name='analyze_data' table='[load-data-bq-329707.GetGround2].[analyze_data]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='bigquery.02817jk0nkmett185261j15dfdir' name='analyze_data' table='[load-data-bq-329707.GetGround2].[analyze_data]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>referral_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[referral_id]</local-name>
+            <parent-name>[analyze_data]</parent-name>
+            <remote-alias>referral_id</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>creation_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[creation_date]</local-name>
+            <parent-name>[analyze_data]</parent-name>
+            <remote-alias>creation_date</remote-alias>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>creation_time</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[creation_time]</local-name>
+            <parent-name>[analyze_data]</parent-name>
+            <remote-alias>creation_time</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[status_date]</local-name>
+            <parent-name>[analyze_data]</parent-name>
+            <remote-alias>status_date</remote-alias>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status_time</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[status_time]</local-name>
+            <parent-name>[analyze_data]</parent-name>
+            <remote-alias>status_time</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>company_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[company_id]</local-name>
+            <parent-name>[analyze_data]</parent-name>
+            <remote-alias>company_id</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>partner_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[partner_id]</local-name>
+            <parent-name>[analyze_data]</parent-name>
+            <remote-alias>partner_id</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>consultant_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[consultant_id]</local-name>
+            <parent-name>[analyze_data]</parent-name>
+            <remote-alias>consultant_id</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[status]</local-name>
+            <parent-name>[analyze_data]</parent-name>
+            <remote-alias>status</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_outbound</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_outbound]</local-name>
+            <parent-name>[analyze_data]</parent-name>
+            <remote-alias>is_outbound</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>partner_type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[partner_type]</local-name>
+            <parent-name>[analyze_data]</parent-name>
+            <remote-alias>partner_type</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lead_sales_contact</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[lead_sales_contact]</local-name>
+            <parent-name>[analyze_data]</parent-name>
+            <remote-alias>lead_sales_contact</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[analyze_data]</parent-name>
+            <remote-alias>country</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='test' datatype='string' name='[Calculation_156077886959624192]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='&apos;&apos;' />
+      </column>
+      <column caption='Outbound' datatype='string' name='[Calculation_187954927752364034]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='STR([is_outbound])' />
+      </column>
+      <column caption='CNTD_company' datatype='integer' name='[Calculation_269723408490766336]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([company_id])' />
+      </column>
+      <column caption='CNT_company' datatype='integer' name='[Calculation_269723408491012097]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([company_id])' />
+      </column>
+      <column caption='CNTD_partner' datatype='integer' name='[Calculation_269723408495595522]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([partner_id])' />
+      </column>
+      <column caption='rank_numb_company' datatype='integer' name='[Calculation_289426656867667968]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RANK(COUNT([company_id]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='selected_rank1' datatype='boolean' name='[Calculation_289426656870563842]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='[Calculation_289426656867667968]&lt;=[Parameters].[Parameter 1]'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='CNT_referral' datatype='integer' name='[Calculation_289426656882266115]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([referral_id])' />
+      </column>
+      <column caption='rank_numb_referral' datatype='integer' name='[Calculation_289426656891129863]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RANK(COUNT([referral_id]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='selected_rank2' datatype='boolean' name='[Calculation_289426656891531272]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='[Calculation_289426656891129863]&lt;=[Parameters].[Top Partner Companies (copy)]'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='CNT_partner' datatype='integer' name='[Calculation_289426656894947337]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([partner_id])' />
+      </column>
+      <column caption='IsOutbound' datatype='string' name='[Calculation_52635832959029248]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='// change 0 and 1 to False and True respectively for is_outbound field &#10;IF [is_outbound] = 0 THEN &apos;False&apos; ELSEIF [is_outbound]= 1 THEN &apos;True&apos; END' />
+      </column>
+      <column caption='CNTD_referral' datatype='integer' name='[Calculation_52635832970878977]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([referral_id])' />
+      </column>
+      <column caption='CNTD_sales_people' datatype='integer' name='[Calculation_52635832972779522]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([lead_sales_contact])' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='analyze_data' datatype='table' name='[__tableau_internal_object_id__].[analyze_data_8E551657887846EB9807F77B32B77A5D]' role='measure' type='quantitative' />
+      <column caption='Company Id' datatype='integer' name='[company_id]' role='dimension' type='ordinal' />
+      <column caption='Consultant Id' datatype='integer' name='[consultant_id]' role='dimension' type='ordinal' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Creation Date' datatype='date' name='[creation_date]' role='dimension' type='ordinal' />
+      <column caption='Creation Time' datatype='string' name='[creation_time]' role='dimension' type='nominal' />
+      <column caption='Is Outbound' datatype='integer' name='[is_outbound]' role='measure' type='quantitative' />
+      <column caption='Lead Sales Contact' datatype='string' name='[lead_sales_contact]' role='dimension' type='nominal' />
+      <column caption='Partner Id' datatype='integer' name='[partner_id]' role='dimension' type='ordinal' />
+      <column caption='Partner Type' datatype='string' name='[partner_type]' role='dimension' type='nominal' />
+      <column caption='Referral Id' datatype='integer' name='[referral_id]' role='dimension' type='ordinal' />
+      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+      <column caption='Status Date' datatype='date' name='[status_date]' role='dimension' type='ordinal' />
+      <column caption='Status Time' datatype='string' name='[status_time]' role='dimension' type='nominal' />
+      <column-instance column='[Calculation_187954927752364034]' derivation='None' name='[none:Calculation_187954927752364034:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_52635832959029248]' derivation='None' name='[none:Calculation_52635832959029248:nk]' pivot='key' type='nominal' />
+      <column-instance column='[partner_type]' derivation='None' name='[none:partner_type:nk]' pivot='key' type='nominal' />
+      <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+      <group caption='Action (IsOutbound)' hidden='true' name='[Action (IsOutbound)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Calculation_52635832959029248]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Partner Id)' hidden='true' name='[Action (Partner Id)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[partner_id]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Status)' hidden='true' name='[Action (Status)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[status]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='Data/GetGround/Partners (GetGround2).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='03/12/2022 09:22:21 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='Partners (GetGround2)' increment-value='%null%' refresh-type='create' rows-inserted='1470' timestamp-start='2022-03-12 21:22:19.188' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>referral_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[referral_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>referral_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>analyze_data</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1470</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>creation_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[creation_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>creation_date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>analyze_data</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>192</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>creation_time</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[creation_time]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>creation_time</remote-alias>
+              <ordinal>2</ordinal>
+              <family>analyze_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1312</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>status_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[status_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>status_date</remote-alias>
+              <ordinal>3</ordinal>
+              <family>analyze_data</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>192</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>status_time</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[status_time]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>status_time</remote-alias>
+              <ordinal>4</ordinal>
+              <family>analyze_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1312</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>company_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[company_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>company_id</remote-alias>
+              <ordinal>5</ordinal>
+              <family>analyze_data</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>669</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>partner_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[partner_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>partner_id</remote-alias>
+              <ordinal>6</ordinal>
+              <family>analyze_data</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>104</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>consultant_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[consultant_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>consultant_id</remote-alias>
+              <ordinal>7</ordinal>
+              <family>analyze_data</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>174</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>status</remote-alias>
+              <ordinal>8</ordinal>
+              <family>analyze_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>is_outbound</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[is_outbound]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>is_outbound</remote-alias>
+              <ordinal>9</ordinal>
+              <family>analyze_data</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>partner_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[partner_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>partner_type</remote-alias>
+              <ordinal>10</ordinal>
+              <family>analyze_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lead_sales_contact</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[lead_sales_contact]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lead_sales_contact</remote-alias>
+              <ordinal>11</ordinal>
+              <family>analyze_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>country</remote-alias>
+              <ordinal>12</ordinal>
+              <family>analyze_data</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LROOT' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[analyze_data_8E551657887846EB9807F77B32B77A5D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_187954927752364034:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;1&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;0&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:status:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;successful&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;disinterested&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;pending&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_52635832959029248:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;True&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;False&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:partner_type:nk]' type='palette'>
+            <map to='#116985'>
+              <bucket>&quot;Agent&quot;</bucket>
+            </map>
+            <map to='#116985'>
+              <bucket>&quot;Developer&quot;</bucket>
+            </map>
+            <map to='#116985'>
+              <bucket>&quot;IFA&quot;</bucket>
+            </map>
+            <map to='#116985'>
+              <bucket>&quot;Influencer&quot;</bucket>
+            </map>
+            <map to='#116985'>
+              <bucket>&quot;Insurer&quot;</bucket>
+            </map>
+            <map to='#116985'>
+              <bucket>&quot;Lender&quot;</bucket>
+            </map>
+            <map to='#116985'>
+              <bucket>&quot;Management company&quot;</bucket>
+            </map>
+            <map to='#116985'>
+              <bucket>&quot;Other&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='referral_id' />
+        <field-sort-custom-order field='creation_date' />
+        <field-sort-custom-order field='creation_time' />
+        <field-sort-custom-order field='status_date' />
+        <field-sort-custom-order field='status_time' />
+        <field-sort-custom-order field='company_id' />
+        <field-sort-custom-order field='partner_id' />
+        <field-sort-custom-order field='consultant_id' />
+        <field-sort-custom-order field='status' />
+        <field-sort-custom-order field='is_outbound' />
+        <field-sort-custom-order field='Calculation_187954927752364034' />
+        <field-sort-custom-order field='partner_type' />
+        <field-sort-custom-order field='lead_sales_contact' />
+        <field-sort-custom-order field='country' />
+      </field-sort-info>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Top Partner Companies' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='10'>
+          <calculation class='tableau' formula='10' />
+          <range granularity='5' max='20' min='5' />
+        </column>
+        <column caption='Top Partner Referrals' datatype='integer' name='[Top Partner Companies (copy)]' param-domain-type='range' role='measure' type='quantitative' value='10'>
+          <calculation class='tableau' formula='10' />
+          <range granularity='5' max='20' min='5' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='analyze_data' id='analyze_data_8E551657887846EB9807F77B32B77A5D'>
+            <properties context=''>
+              <relation connection='bigquery.02817jk0nkmett185261j15dfdir' name='analyze_data' table='[load-data-bq-329707.GetGround2].[analyze_data]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Referrals Breakdown' name='[Action1_11DE3F4475584D6D890124A3FA19A81A]'>
+      <activation auto-clear='true' />
+      <source dashboard='Referral Status Overview' type='sheet' worksheet='Type of Status' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Referral Status Dashboard' />
+      </command>
+    </action>
+    <action caption='Partner_Referral Breakdown' name='[Action2_34AB81C1956A481BA1CC2F6EF1BA4D08]'>
+      <activation auto-clear='true' />
+      <source dashboard='Referral Status Overview' type='sheet' worksheet='Top Partners by Referrals' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Referral Status Dashboard' />
+      </command>
+    </action>
+    <action caption='Outbound Breakdown' name='[Action3_0BFA36B9F3B540BFAFDB9B9F176217BD]'>
+      <activation auto-clear='true' />
+      <source dashboard='Referral Status Overview' type='sheet' worksheet='Outbound Company' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Referral Status Dashboard' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Analyze Referral Status'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Partners (GetGround2)' name='federated.0dwbmxi0rnbxpj1c8sffh0q710xc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dwbmxi0rnbxpj1c8sffh0q710xc'>
+            <column caption='Company Id' datatype='integer' name='[company_id]' role='dimension' type='ordinal' />
+            <column-instance column='[company_id]' derivation='None' name='[none:company_id:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[partner_id]' derivation='None' name='[none:partner_id:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[partner_type]' derivation='None' name='[none:partner_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[referral_id]' derivation='None' name='[none:referral_id:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[status_time]' derivation='None' name='[none:status_time:nk]' pivot='key' type='nominal' />
+            <column caption='Partner Id' datatype='integer' name='[partner_id]' role='dimension' type='ordinal' />
+            <column caption='Partner Type' datatype='string' name='[partner_type]' role='dimension' type='nominal' />
+            <column caption='Referral Id' datatype='integer' name='[referral_id]' role='dimension' type='ordinal' />
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+            <column caption='Status Date' datatype='date' name='[status_date]' role='dimension' type='ordinal' />
+            <column caption='Status Time' datatype='string' name='[status_time]' role='dimension' type='nominal' />
+            <column-instance column='[status_date]' derivation='Day-Trunc' name='[tdy:status_date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;successful&quot;</bucket>
+              <bucket>&quot;pending&quot;</bucket>
+              <bucket>&quot;disinterested&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[tdy:status_date:qk]' value='*' />
+            <format attr='width' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]' value='88' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]' />
+              <text column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[tdy:status_date:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:referral_id:ok] / ([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:company_id:ok] / ([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_id:ok] / ([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_type:nk] / [federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status_time:nk]))))</rows>
+        <cols>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]</cols>
+      </table>
+      <simple-id uuid='{D6E8604A-416E-45FC-9327-45B3B39ABBBC}' />
+    </worksheet>
+    <worksheet name='Count Companies'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Partners (GetGround2)' name='federated.0dwbmxi0rnbxpj1c8sffh0q710xc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dwbmxi0rnbxpj1c8sffh0q710xc'>
+            <column caption='CNTD_company' datatype='integer' name='[Calculation_269723408490766336]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([company_id])' />
+            </column>
+            <column caption='Company Id' datatype='integer' name='[company_id]' role='dimension' type='ordinal' />
+            <column caption='Status Date' datatype='date' name='[status_date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_269723408490766336]' derivation='User' name='[usr:Calculation_269723408490766336:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[status_date]' derivation='Year' name='[yr:status_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]' filter-group='3'>
+            <groupfilter function='member' level='[yr:status_date:ok]' member='2021' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408490766336:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='15'>No. of Companies</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#11353c' fontsize='18'><![CDATA[<[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408490766336:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{01855C3A-A3EF-4313-B5AE-588F5E034555}' />
+    </worksheet>
+    <worksheet name='Count Partners'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Partners (GetGround2)' name='federated.0dwbmxi0rnbxpj1c8sffh0q710xc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dwbmxi0rnbxpj1c8sffh0q710xc'>
+            <column caption='CNTD_partner' datatype='integer' name='[Calculation_269723408495595522]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([partner_id])' />
+            </column>
+            <column caption='Partner Id' datatype='integer' name='[partner_id]' role='dimension' type='ordinal' />
+            <column caption='Status Date' datatype='date' name='[status_date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_269723408495595522]' derivation='User' name='[usr:Calculation_269723408495595522:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[status_date]' derivation='Year' name='[yr:status_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]' filter-group='3'>
+            <groupfilter function='member' level='[yr:status_date:ok]' member='2021' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408495595522:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='15'>No. of Partners</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#11353c' fontsize='18'><![CDATA[<[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408495595522:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2A826F8C-5BAD-43F8-922A-BC1F43BC2E7F}' />
+    </worksheet>
+    <worksheet name='Count Referrals'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Partners (GetGround2)' name='federated.0dwbmxi0rnbxpj1c8sffh0q710xc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dwbmxi0rnbxpj1c8sffh0q710xc'>
+            <column caption='CNT_referral' datatype='integer' name='[Calculation_289426656882266115]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([referral_id])' />
+            </column>
+            <column caption='Referral Id' datatype='integer' name='[referral_id]' role='dimension' type='ordinal' />
+            <column caption='Status Date' datatype='date' name='[status_date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_289426656882266115]' derivation='User' name='[usr:Calculation_289426656882266115:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[status_date]' derivation='Year' name='[yr:status_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]' filter-group='3'>
+            <groupfilter function='member' level='[yr:status_date:ok]' member='2021' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656882266115:qk]' value='n0;-0' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656882266115:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='15'>No. of Referrals Id</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#11353c' fontsize='18'><![CDATA[<[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656882266115:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3B22440B-88DD-4A7F-8CBD-EDDE4D321F4A}' />
+    </worksheet>
+    <worksheet name='Count Sales People'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Partners (GetGround2)' name='federated.0dwbmxi0rnbxpj1c8sffh0q710xc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dwbmxi0rnbxpj1c8sffh0q710xc'>
+            <column caption='CNTD_sales_people' datatype='integer' name='[Calculation_52635832972779522]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([lead_sales_contact])' />
+            </column>
+            <column caption='Lead Sales Contact' datatype='string' name='[lead_sales_contact]' role='dimension' type='nominal' />
+            <column caption='Status Date' datatype='date' name='[status_date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_52635832972779522]' derivation='User' name='[usr:Calculation_52635832972779522:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[status_date]' derivation='Year' name='[yr:status_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]' filter-group='3'>
+            <groupfilter function='member' level='[yr:status_date:ok]' member='2021' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_52635832972779522:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='15'>No. of Sales Contact</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#11353c' fontsize='18'><![CDATA[<[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_52635832972779522:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{863F318E-77B2-42B2-9CF6-96BCEDE61E0A}' />
+    </worksheet>
+    <worksheet name='Outbound Company'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Partners (GetGround2)' name='federated.0dwbmxi0rnbxpj1c8sffh0q710xc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dwbmxi0rnbxpj1c8sffh0q710xc'>
+            <column caption='CNTD_company' datatype='integer' name='[Calculation_269723408490766336]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([company_id])' />
+            </column>
+            <column caption='IsOutbound' datatype='string' name='[Calculation_52635832959029248]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='// change 0 and 1 to False and True respectively for is_outbound field &#10;IF [is_outbound] = 0 THEN &apos;False&apos; ELSEIF [is_outbound]= 1 THEN &apos;True&apos; END' />
+            </column>
+            <column caption='Company Id' datatype='integer' name='[company_id]' role='dimension' type='ordinal' />
+            <column caption='Is Outbound' datatype='integer' name='[is_outbound]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_52635832959029248]' derivation='None' name='[none:Calculation_52635832959029248:nk]' pivot='key' type='nominal' />
+            <column caption='Status Date' datatype='date' name='[status_date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_269723408490766336]' derivation='User' name='[usr:Calculation_269723408490766336:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[status_date]' derivation='Year' name='[yr:status_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]' filter-group='3'>
+            <groupfilter function='member' level='[yr:status_date:ok]' member='2021' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408490766336:qk]' scope='rows' value='Count Companies' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_52635832959029248:nk]' />
+              <text column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408490766336:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408490766336:qk]</rows>
+        <cols>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_52635832959029248:nk]</cols>
+      </table>
+      <simple-id uuid='{B4AFFB17-6C35-4E32-A7EF-4D215AFC7723}' />
+    </worksheet>
+    <worksheet name='Referral Status'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Partners (GetGround2)' name='federated.0dwbmxi0rnbxpj1c8sffh0q710xc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dwbmxi0rnbxpj1c8sffh0q710xc'>
+            <column caption='Sales Person' datatype='string' name='[Calculation_289426656887570436]' role='dimension' type='nominal' user:unnamed='Referral Status'>
+              <calculation class='tableau' formula='//Sales Person &#10;[lead_sales_contact]' />
+            </column>
+            <column caption='IsOutbound' datatype='string' name='[Calculation_52635832959029248]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='// change 0 and 1 to False and True respectively for is_outbound field &#10;IF [is_outbound] = 0 THEN &apos;False&apos; ELSEIF [is_outbound]= 1 THEN &apos;True&apos; END' />
+            </column>
+            <column caption='Company Id' datatype='integer' name='[company_id]' role='dimension' type='ordinal' />
+            <column caption='Consultant Id' datatype='integer' name='[consultant_id]' role='dimension' type='ordinal' />
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Is Outbound' datatype='integer' name='[is_outbound]' role='measure' type='quantitative' />
+            <column caption='Lead Sales Contact' datatype='string' name='[lead_sales_contact]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_289426656887570436]' derivation='None' name='[none:Calculation_289426656887570436:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_52635832959029248]' derivation='None' name='[none:Calculation_52635832959029248:nk]' pivot='key' type='nominal' />
+            <column-instance column='[company_id]' derivation='None' name='[none:company_id:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[consultant_id]' derivation='None' name='[none:consultant_id:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[partner_id]' derivation='None' name='[none:partner_id:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[partner_type]' derivation='None' name='[none:partner_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[referral_id]' derivation='None' name='[none:referral_id:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[status_time]' derivation='None' name='[none:status_time:nk]' pivot='key' type='nominal' />
+            <column caption='Partner Id' datatype='integer' name='[partner_id]' role='dimension' type='ordinal' />
+            <column caption='Partner Type' datatype='string' name='[partner_type]' role='dimension' type='nominal' />
+            <column caption='Referral Id' datatype='integer' name='[referral_id]' role='dimension' type='ordinal' />
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+            <column caption='Status Date' datatype='date' name='[status_date]' role='dimension' type='ordinal' />
+            <column caption='Status Time' datatype='string' name='[status_time]' role='dimension' type='nominal' />
+            <column-instance column='[status_date]' derivation='Day-Trunc' name='[tdy:status_date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[Action (IsOutbound)]'>
+            <groupfilter function='level-members' level='[Calculation_52635832959029248]' user:ui-action-filter='[Action3_0BFA36B9F3B540BFAFDB9B9F176217BD]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[Action (Partner Id)]'>
+            <groupfilter function='level-members' level='[partner_id]' user:ui-action-filter='[Action2_34AB81C1956A481BA1CC2F6EF1BA4D08]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[Action (Status)]'>
+            <groupfilter function='level-members' level='[status]' user:ui-action-filter='[Action1_11DE3F4475584D6D890124A3FA19A81A]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <manual-sort column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;successful&quot;</bucket>
+              <bucket>&quot;pending&quot;</bucket>
+              <bucket>&quot;disinterested&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[Action (Status)]</column>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[Action (Partner Id)]</column>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[Action (IsOutbound)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]' value='84' />
+            <format attr='text-format' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[tdy:status_date:qk]' value='*' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:consultant_id:ok]' value='88' />
+            <format attr='width' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_type:nk]' value='88' />
+            <format attr='width' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_id:ok]' value='72' />
+            <format attr='width' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:referral_id:ok]' value='72' />
+            <format attr='width' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_289426656887570436:nk]' value='84' />
+            <format attr='width' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:country:nk]' value='60' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]' value='center' />
+            <format attr='text-align' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:referral_id:ok]' value='center' />
+            <format attr='text-align' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:company_id:ok]' value='center' />
+            <format attr='text-align' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_id:ok]' value='center' />
+            <format attr='text-align' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_type:nk]' value='center' />
+            <format attr='text-align' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:consultant_id:ok]' value='center' />
+            <format attr='text-align' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_289426656887570436:nk]' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]' />
+              <text column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[tdy:status_date:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:referral_id:ok] / ([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:company_id:ok] / ([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_id:ok] / ([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_type:nk] / ([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:consultant_id:ok] / ([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_289426656887570436:nk] / ([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:country:nk] / ([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_52635832959029248:nk] / [federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status_time:nk]))))))))</rows>
+        <cols>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]</cols>
+      </table>
+      <simple-id uuid='{07446223-F6E7-40D5-A3C3-45A749597EC5}' />
+    </worksheet>
+    <worksheet name='Referrals Status per Month'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Partners (GetGround2)' name='federated.0dwbmxi0rnbxpj1c8sffh0q710xc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dwbmxi0rnbxpj1c8sffh0q710xc'>
+            <column caption='CNT_referral' datatype='integer' name='[Calculation_289426656882266115]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([referral_id])' />
+            </column>
+            <column-instance column='[status_date]' derivation='Month' name='[mn:status_date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+            <column caption='Referral Id' datatype='integer' name='[referral_id]' role='dimension' type='ordinal' />
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+            <column caption='Status Date' datatype='date' name='[status_date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_289426656882266115]' derivation='User' name='[usr:Calculation_289426656882266115:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]'>
+            <groupfilter function='member' level='[none:status:nk]' member='&quot;successful&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[mn:status_date:ok]' value='70' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[mn:status_date:ok]' value='iLLL' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]' />
+              <text column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656882266115:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656882266115:qk]</rows>
+        <cols>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[mn:status_date:ok]</cols>
+      </table>
+      <simple-id uuid='{7407291F-385D-44B7-BF07-8912D666AE9E}' />
+    </worksheet>
+    <worksheet name='Referrals per Month'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Partners (GetGround2)' name='federated.0dwbmxi0rnbxpj1c8sffh0q710xc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dwbmxi0rnbxpj1c8sffh0q710xc'>
+            <column caption='CNT_referral' datatype='integer' name='[Calculation_289426656882266115]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([referral_id])' />
+            </column>
+            <column-instance column='[status_date]' derivation='Month' name='[mn:status_date:ok]' pivot='key' type='ordinal' />
+            <column caption='Referral Id' datatype='integer' name='[referral_id]' role='dimension' type='ordinal' />
+            <column caption='Status Date' datatype='date' name='[status_date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_289426656882266115]' derivation='User' name='[usr:Calculation_289426656882266115:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[status_date]' derivation='Year' name='[yr:status_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]' filter-group='3'>
+            <groupfilter function='member' level='[yr:status_date:ok]' member='2021' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656882266115:qk]' scope='rows' value='Count Referrals' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[mn:status_date:ok]' value='66' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[mn:status_date:ok]' value='iLLL' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]' value='Select Year'>
+              <formatted-text>
+                <run>Select Year</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656882266115:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#176171' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656882266115:qk]</rows>
+        <cols>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[mn:status_date:ok]</cols>
+      </table>
+      <simple-id uuid='{28A07507-38C8-4A9E-B294-4F0A0B5C948E}' />
+    </worksheet>
+    <worksheet name='Sales Contact by Partners'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='12'>Sales Contact by accounts Partner managed</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Partners (GetGround2)' name='federated.0dwbmxi0rnbxpj1c8sffh0q710xc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dwbmxi0rnbxpj1c8sffh0q710xc'>
+            <column caption='CNTD_partner' datatype='integer' name='[Calculation_269723408495595522]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([partner_id])' />
+            </column>
+            <column caption='Sales Contact' datatype='string' name='[Calculation_52635832990257155]' role='dimension' type='nominal' user:unnamed='Sales Contact by Partners'>
+              <calculation class='tableau' formula='//Sales Contact&#10;[lead_sales_contact]' />
+            </column>
+            <column caption='Lead Sales Contact' datatype='string' name='[lead_sales_contact]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_52635832990257155]' derivation='None' name='[none:Calculation_52635832990257155:nk]' pivot='key' type='nominal' />
+            <column-instance column='[lead_sales_contact]' derivation='None' name='[none:lead_sales_contact:nk]' pivot='key' type='nominal' />
+            <column caption='Partner Id' datatype='integer' name='[partner_id]' role='dimension' type='ordinal' />
+            <column caption='Status Date' datatype='date' name='[status_date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_269723408495595522]' derivation='User' name='[usr:Calculation_269723408495595522:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[status_date]' derivation='Year' name='[yr:status_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:lead_sales_contact:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:lead_sales_contact:nk]' />
+              <groupfilter function='member' level='[none:lead_sales_contact:nk]' member='&quot;0&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]' filter-group='3'>
+            <groupfilter function='member' level='[yr:status_date:ok]' member='2021' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_52635832990257155:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408495595522:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:lead_sales_contact:nk]</column>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408495595522:qk]' scope='cols' value='Count Partners' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:lead_sales_contact:nk]' value='148' />
+            <format attr='width' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_52635832990257155:nk]' value='124' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:lead_sales_contact:nk]' value='center' />
+            <format attr='text-align' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_52635832990257155:nk]' value='center' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408495595522:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#187491' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_52635832990257155:nk]</rows>
+        <cols>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408495595522:qk]</cols>
+      </table>
+      <simple-id uuid='{F0F633AA-4FF8-4ABD-B628-7D0EF0DAB59D}' />
+    </worksheet>
+    <worksheet name='Sheet 15'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>OutBound is true&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Partners (GetGround2)' name='federated.0dwbmxi0rnbxpj1c8sffh0q710xc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dwbmxi0rnbxpj1c8sffh0q710xc'>
+            <column caption='Sales Contact' datatype='string' name='[Calculation_156077886960005121]' role='dimension' type='nominal' user:unnamed='Sheet 15'>
+              <calculation class='tableau' formula='//Sales Contact&#10;[lead_sales_contact]' />
+            </column>
+            <column caption='CNTD_company' datatype='integer' name='[Calculation_269723408490766336]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([company_id])' />
+            </column>
+            <column caption='IsOutbound' datatype='string' name='[Calculation_52635832959029248]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='// change 0 and 1 to False and True respectively for is_outbound field &#10;IF [is_outbound] = 0 THEN &apos;False&apos; ELSEIF [is_outbound]= 1 THEN &apos;True&apos; END' />
+            </column>
+            <column caption='Company Id' datatype='integer' name='[company_id]' role='dimension' type='ordinal' />
+            <column caption='Is Outbound' datatype='integer' name='[is_outbound]' role='measure' type='quantitative' />
+            <column caption='Lead Sales Contact' datatype='string' name='[lead_sales_contact]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_156077886960005121]' derivation='None' name='[none:Calculation_156077886960005121:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_52635832959029248]' derivation='None' name='[none:Calculation_52635832959029248:nk]' pivot='key' type='nominal' />
+            <column-instance column='[partner_id]' derivation='None' name='[none:partner_id:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[partner_type]' derivation='None' name='[none:partner_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+            <column caption='Partner Id' datatype='integer' name='[partner_id]' role='dimension' type='ordinal' />
+            <column caption='Partner Type' datatype='string' name='[partner_type]' role='dimension' type='nominal' />
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_269723408490766336]' derivation='User' name='[usr:Calculation_269723408490766336:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_52635832959029248:nk]'>
+            <groupfilter function='member' level='[none:Calculation_52635832959029248:nk]' member='&quot;True&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]' direction='DESC' measure-to-sort-by='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408490766336:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_52635832959029248:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='5' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_156077886960005121:nk]' value='88' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_id:ok] / ([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_type:nk] / ([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk] / ([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_156077886960005121:nk] / [federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_52635832959029248:nk]))))</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{F1E340A0-6CE4-47ED-BD7A-C9F97239F0F5}' />
+    </worksheet>
+    <worksheet name='Sheet 16'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Partners (GetGround2)' name='federated.0dwbmxi0rnbxpj1c8sffh0q710xc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dwbmxi0rnbxpj1c8sffh0q710xc'>
+            <column caption='IsOutbound' datatype='string' name='[Calculation_52635832959029248]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='// change 0 and 1 to False and True respectively for is_outbound field &#10;IF [is_outbound] = 0 THEN &apos;False&apos; ELSEIF [is_outbound]= 1 THEN &apos;True&apos; END' />
+            </column>
+            <column caption='Company Id' datatype='integer' name='[company_id]' role='dimension' type='ordinal' />
+            <column caption='Is Outbound' datatype='integer' name='[is_outbound]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_52635832959029248]' derivation='None' name='[none:Calculation_52635832959029248:nk]' pivot='key' type='nominal' />
+            <column-instance column='[company_id]' derivation='None' name='[none:company_id:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_52635832959029248:nk]'>
+            <groupfilter function='member' level='[none:Calculation_52635832959029248:nk]' member='&quot;True&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_52635832959029248:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:company_id:ok] / [federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_52635832959029248:nk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{2071101C-340B-40E2-8402-9EF7B6A7C0EC}' />
+    </worksheet>
+    <worksheet name='Top Partners by Companies'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Partners (GetGround2)' name='federated.0dwbmxi0rnbxpj1c8sffh0q710xc' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Top Partner Companies' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='10'>
+              <calculation class='tableau' formula='10' />
+              <range granularity='5' max='20' min='5' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0dwbmxi0rnbxpj1c8sffh0q710xc'>
+            <column caption='CNTD_company' datatype='integer' name='[Calculation_269723408490766336]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([company_id])' />
+            </column>
+            <column caption='rank_numb_company' datatype='integer' name='[Calculation_289426656867667968]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RANK(COUNT([company_id]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='selected_rank1' datatype='boolean' name='[Calculation_289426656870563842]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='[Calculation_289426656867667968]&lt;=[Parameters].[Parameter 1]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Company Id' datatype='integer' name='[company_id]' role='dimension' type='ordinal' />
+            <column-instance column='[partner_id]' derivation='None' name='[none:partner_id:ok]' pivot='key' type='ordinal' />
+            <column caption='Partner Id' datatype='integer' name='[partner_id]' role='dimension' type='ordinal' />
+            <column caption='Status Date' datatype='date' name='[status_date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_269723408490766336]' derivation='User' name='[usr:Calculation_269723408490766336:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_289426656867667968]' derivation='User' name='[usr:Calculation_289426656867667968:ok]' pivot='key' type='ordinal'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+            <column-instance column='[Calculation_289426656870563842]' derivation='User' name='[usr:Calculation_289426656870563842:nk:1]' pivot='key' type='nominal'>
+              <table-calc ordering-type='Columns' />
+              <table-calc field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[Calculation_289426656867667968]' ordering-type='Columns' />
+            </column-instance>
+            <column-instance column='[status_date]' derivation='Year' name='[yr:status_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656870563842:nk:1]'>
+            <groupfilter function='member' level='[usr:Calculation_289426656870563842:nk:1]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]'>
+            <groupfilter function='member' level='[yr:status_date:ok]' member='2021' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_id:ok]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408490766336:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656870563842:nk:1]</column>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408490766336:qk]' scope='cols' value='Count Companies' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_id:ok]' value='72' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656867667968:ok]' value='false' />
+            <format attr='text-align' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_id:ok]' value='center' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]' value='Year'>
+              <formatted-text>
+                <run>Year</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='parameter-ctrl'>
+            <format attr='title' field='[Parameters].[Parameter 1]' value='Top Partners' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408490766336:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#187491' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_id:ok] / [federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656867667968:ok])</rows>
+        <cols>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408490766336:qk]</cols>
+      </table>
+      <simple-id uuid='{63AB925A-A727-4349-BFAC-7840B0809062}' />
+    </worksheet>
+    <worksheet name='Top Partners by Referrals'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Partners (GetGround2)' name='federated.0dwbmxi0rnbxpj1c8sffh0q710xc' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Top Partner Referrals' datatype='integer' name='[Top Partner Companies (copy)]' param-domain-type='range' role='measure' type='quantitative' value='10'>
+              <calculation class='tableau' formula='10' />
+              <range granularity='5' max='20' min='5' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0dwbmxi0rnbxpj1c8sffh0q710xc'>
+            <column caption='CNT_referral' datatype='integer' name='[Calculation_289426656882266115]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([referral_id])' />
+            </column>
+            <column caption='rank_numb_referral' datatype='integer' name='[Calculation_289426656891129863]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RANK(COUNT([referral_id]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='selected_rank2' datatype='boolean' name='[Calculation_289426656891531272]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='[Calculation_289426656891129863]&lt;=[Parameters].[Top Partner Companies (copy)]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column-instance column='[partner_id]' derivation='None' name='[none:partner_id:ok]' pivot='key' type='ordinal' />
+            <column caption='Partner Id' datatype='integer' name='[partner_id]' role='dimension' type='ordinal' />
+            <column caption='Referral Id' datatype='integer' name='[referral_id]' role='dimension' type='ordinal' />
+            <column caption='Status Date' datatype='date' name='[status_date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_289426656882266115]' derivation='User' name='[usr:Calculation_289426656882266115:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_289426656891129863]' derivation='User' name='[usr:Calculation_289426656891129863:ok]' pivot='key' type='ordinal'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+            <column-instance column='[Calculation_289426656891531272]' derivation='User' name='[usr:Calculation_289426656891531272:nk]' pivot='key' type='nominal'>
+              <table-calc ordering-type='Columns' />
+              <table-calc field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[Calculation_289426656891129863]' ordering-type='Columns' />
+            </column-instance>
+            <column-instance column='[status_date]' derivation='Year' name='[yr:status_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656891531272:nk]'>
+            <groupfilter function='member' level='[usr:Calculation_289426656891531272:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]' filter-group='3'>
+            <groupfilter function='member' level='[yr:status_date:ok]' member='2021' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_id:ok]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656882266115:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656891531272:nk]</column>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656882266115:qk]' scope='cols' value='Count Referrals' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656891129863:ok]' value='false' />
+            <format attr='text-align' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_id:ok]' value='center' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='parameter-ctrl'>
+            <format attr='title' field='[Parameters].[Top Partner Companies (copy)]' value='Top Partners' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656882266115:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#187491' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_id:ok] / [federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656891129863:ok])</rows>
+        <cols>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656882266115:qk]</cols>
+      </table>
+      <simple-id uuid='{093A7569-82E7-4E8E-86F3-D5A77C6ADEE5}' />
+    </worksheet>
+    <worksheet name='Type of Partners'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Partners (GetGround2)' name='federated.0dwbmxi0rnbxpj1c8sffh0q710xc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dwbmxi0rnbxpj1c8sffh0q710xc'>
+            <column caption='CNTD_partner' datatype='integer' name='[Calculation_269723408495595522]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([partner_id])' />
+            </column>
+            <column-instance column='[partner_type]' derivation='None' name='[none:partner_type:nk]' pivot='key' type='nominal' />
+            <column caption='Partner Id' datatype='integer' name='[partner_id]' role='dimension' type='ordinal' />
+            <column caption='Partner Type' datatype='string' name='[partner_type]' role='dimension' type='nominal' />
+            <column caption='Status Date' datatype='date' name='[status_date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_269723408495595522]' derivation='User' name='[usr:Calculation_269723408495595522:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[status_date]' derivation='Year' name='[yr:status_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]' filter-group='3'>
+            <groupfilter function='member' level='[yr:status_date:ok]' member='2021' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_type:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408495595522:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408495595522:qk]' scope='rows' value='Count Partners' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_type:nk]' value='112' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_type:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_269723408495595522:qk]</rows>
+        <cols>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_type:nk]</cols>
+      </table>
+      <simple-id uuid='{AA6776E1-0DF9-47AA-A6D6-F22C4E857A09}' />
+    </worksheet>
+    <worksheet name='Type of Status'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Referral Status</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Partners (GetGround2)' name='federated.0dwbmxi0rnbxpj1c8sffh0q710xc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0dwbmxi0rnbxpj1c8sffh0q710xc'>
+            <column caption='CNT_referral' datatype='integer' name='[Calculation_289426656882266115]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([referral_id])' />
+            </column>
+            <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+            <column caption='Referral Id' datatype='integer' name='[referral_id]' role='dimension' type='ordinal' />
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+            <column caption='Status Date' datatype='date' name='[status_date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_289426656882266115]' derivation='User' name='[usr:Calculation_289426656882266115:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[status_date]' derivation='Year' name='[yr:status_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;successful&quot;</bucket>
+              <bucket>&quot;pending&quot;</bucket>
+              <bucket>&quot;disinterested&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]' filter-group='3'>
+            <groupfilter function='member' level='[yr:status_date:ok]' member='2021' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656882266115:qk]' scope='rows' value='Count Referrals' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]' value='85' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]' />
+              <text column='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656882266115:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[usr:Calculation_289426656882266115:qk]</rows>
+        <cols>[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]</cols>
+      </table>
+      <simple-id uuid='{5C5D45A8-CB79-459B-899B-02C9F6CA6210}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Referral Status Dashboard'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='90299' id='3' name='Referral Status' w='83076' x='1709' y='7761' />
+        <zone h='12239' id='4' name='Referral Status' pane-specification-id='0' param='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]' type-v2='color' w='8544' x='81530' y='14925' />
+        <zone h='7375' id='5' is-centered='0' is-scaled='1' param='Image/logo1.png' type-v2='bitmap' w='15000' x='1100' y='1125' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='77' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='76' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+                <zone fixed-size='59' h='7375' id='5' is-centered='0' is-fixed='true' is-scaled='1' param='Image/logo1.png' type-v2='bitmap' w='15000' x='1100' y='1125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='90299' id='3' is-fixed='true' name='Referral Status' w='83076' x='1709' y='7761'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='12239' id='4' name='Referral Status' pane-specification-id='0' param='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]' type-v2='color' w='8544' x='81530' y='14925'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{93E4F009-C1FD-42BC-8205-7092DEB42ECF}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Referral Status Overview'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Æ                                                                                                       </run>
+            <run bold='true' fontcolor='#11353c'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource name='Parameters' />
+        <datasource caption='Partners (GetGround2)' name='federated.0dwbmxi0rnbxpj1c8sffh0q710xc' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Top Partner Referrals' datatype='integer' name='[Top Partner Companies (copy)]' param-domain-type='range' role='measure' type='quantitative' value='10'>
+          <calculation class='tableau' formula='10' />
+          <range granularity='5' max='20' min='5' />
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.0dwbmxi0rnbxpj1c8sffh0q710xc'>
+        <column caption='Status Date' datatype='date' name='[status_date]' role='dimension' type='ordinal' />
+        <column-instance column='[status_date]' derivation='Year' name='[yr:status_date:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='15' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97616' id='18' param='vert' type-v2='layout-flow' w='98698' x='651' y='1192'>
+            <zone fixed-size='51' h='8793' id='19' is-fixed='true' type-v2='title' w='98698' x='651' y='1192'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='88823' id='16' type-v2='layout-basic' w='98698' x='651' y='9985' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='7000' id='12' is-centered='0' is-scaled='1' param='Image/logo1.png' type-v2='bitmap' w='13600' x='1700' y='1625' />
+        <zone h='12090' id='22' name='Count Referrals' show-title='false' w='23678' x='25142' y='10896'>
+          <zone-style>
+            <format attr='border-color' value='#898989' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+          </zone-style>
+        </zone>
+        <zone h='12090' id='28' name='Count Companies' show-title='false' w='24166' x='49390' y='10896'>
+          <zone-style>
+            <format attr='border-color' value='#898989' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+          </zone-style>
+        </zone>
+        <zone h='12090' id='32' name='Count Partners' show-title='false' w='23759' x='895' y='10896'>
+          <zone-style>
+            <format attr='border-color' value='#898989' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+          </zone-style>
+        </zone>
+        <zone h='12090' id='35' name='Count Sales People' show-title='false' w='24654' x='74044' y='10896'>
+          <zone-style>
+            <format attr='border-color' value='#898989' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+          </zone-style>
+        </zone>
+        <zone h='37031' id='40' name='Type of Status' w='32477' x='1077' y='24138' />
+        <zone h='37164' id='58' name='Referrals per Month' w='31245' x='34011' y='24030' />
+        <zone h='6147' id='59' mode='checkdropdown' name='Referrals per Month' param='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]' type-v2='filter' w='12759' x='85584' y='3448' />
+        <zone h='37612' id='60' name='Type of Partners' w='32954' x='65745' y='23582' />
+        <zone h='34328' id='94' name='Outbound Company' w='49308' x='49227' y='63134' />
+        <zone h='35075' id='109' name='Top Partners by Referrals' w='47437' x='1058' y='62388' />
+        <zone custom-title='true' h='6866' id='110' mode='slider' param='[Parameters].[Top Partner Companies (copy)]' type-v2='paramctrl' w='14809' x='29943' y='61791'>
+          <formatted-text>
+            <run>Top Partners</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run>Æ                                                                                                       </run>
+                <run bold='true' fontcolor='#11353c'>&lt;Sheet Name&gt;</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='2100' minheight='2100' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='170' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97650' id='169' param='vert' type-v2='layout-flow' w='98698' x='651' y='1175'>
+                <zone fixed-size='51' h='8664' id='19' type-v2='title' w='98698' x='651' y='1175'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='56' h='7000' id='12' is-centered='0' is-fixed='true' is-scaled='1' param='Image/logo1.png' type-v2='bitmap' w='13600' x='1700' y='1625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='93' h='12090' id='32' is-fixed='true' name='Count Partners' show-title='false' w='23759' x='895' y='10896'>
+                  <zone-style>
+                    <format attr='border-color' value='#898989' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='93' h='12090' id='22' is-fixed='true' name='Count Referrals' show-title='false' w='23678' x='25142' y='10896'>
+                  <zone-style>
+                    <format attr='border-color' value='#898989' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='93' h='12090' id='28' is-fixed='true' name='Count Companies' show-title='false' w='24166' x='49390' y='10896'>
+                  <zone-style>
+                    <format attr='border-color' value='#898989' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='93' h='12090' id='35' is-fixed='true' name='Count Sales People' show-title='false' w='24654' x='74044' y='10896'>
+                  <zone-style>
+                    <format attr='border-color' value='#898989' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37612' id='60' is-fixed='true' name='Type of Partners' w='32954' x='65745' y='23582'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6147' id='59' mode='checkdropdown' name='Referrals per Month' param='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]' type-v2='filter' w='12759' x='85584' y='3448'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37164' id='58' is-fixed='true' name='Referrals per Month' w='31245' x='34011' y='24030'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37031' id='40' is-fixed='true' name='Type of Status' w='32477' x='1077' y='24138'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone custom-title='true' h='6866' id='110' mode='slider' param='[Parameters].[Top Partner Companies (copy)]' type-v2='paramctrl' w='14809' x='29943' y='61791'>
+                  <formatted-text>
+                    <run>Top Partners</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='35075' id='109' is-fixed='true' name='Top Partners by Referrals' w='47437' x='1058' y='62388'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='275' h='34328' id='94' is-fixed='true' name='Outbound Company' w='49308' x='49227' y='63134'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{4A522AC8-A491-4C8E-B271-8E9D2FEE7C26}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Referral Status'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='113'>
+            <card pane-specification-id='0' param='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{162D2717-7699-4871-96B3-4C6B6A3EC0A0}' />
+    </window>
+    <window class='worksheet' name='Analyze Referral Status'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8A61C68B-A82E-4BC4-BC0A-1745049B1369}' />
+    </window>
+    <window class='worksheet' name='Sheet 15'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{653B2707-80F0-42DA-BE2A-CB9E64047C14}' />
+    </window>
+    <window class='worksheet' name='Sheet 16'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1D51E950-73A3-465B-B517-4090C0BB9585}' />
+    </window>
+    <window class='worksheet' name='Type of Status'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2FA9A6A4-481E-42D0-B2EE-4D0FEE082128}' />
+    </window>
+    <window class='worksheet' name='Top Partners by Companies'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]' type='filter' />
+            <card custom-title='true' mode='slider' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3A257480-F3B9-47CA-A9CB-2F7A5C817F69}' />
+    </window>
+    <window class='worksheet' name='Top Partners by Referrals'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card custom-title='true' mode='slider' param='[Parameters].[Top Partner Companies (copy)]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1C4D3584-580D-4A16-A00B-56C7A55C94A2}' />
+    </window>
+    <window class='worksheet' name='Type of Partners'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:partner_type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CD6DDBF2-4075-4407-9D86-54E41123F8D7}' />
+    </window>
+    <window class='worksheet' name='Outbound Company'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:Calculation_52635832959029248:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E43F4941-4C7A-4DE6-8843-AEA319DB9918}' />
+    </window>
+    <window class='worksheet' name='Sales Contact by Partners'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{76E47640-ABC4-4B6E-A1DA-B1A3169115EB}' />
+    </window>
+    <window class='worksheet' name='Referrals per Month'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[yr:status_date:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{82C7EF64-439C-4A61-876F-202C5613A565}' />
+    </window>
+    <window class='worksheet' name='Referrals Status per Month'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0dwbmxi0rnbxpj1c8sffh0q710xc].[none:status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{009F9FAD-C3AD-478E-806F-CCD07945EECA}' />
+    </window>
+    <window class='worksheet' name='Count Referrals'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{9AB759F5-CB3C-43D2-8F87-760486D445E0}' />
+    </window>
+    <window class='worksheet' name='Count Companies'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{4682D1BC-CCEF-4B1B-9415-22EF63817218}' />
+    </window>
+    <window class='worksheet' name='Count Partners'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{1A0221A4-4692-46AA-AF89-785F24D559AF}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Count Sales People'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{23CC791E-76F3-4ACC-800E-F0A27A9C953A}' />
+    </window>
+    <window class='dashboard' name='Referral Status Overview'>
+      <viewpoints>
+        <viewpoint name='Count Companies'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Count Partners'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Count Referrals'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Count Sales People'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Outbound Company'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Referrals per Month'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top Partners by Referrals' />
+        <viewpoint name='Type of Partners'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Type of Status'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='58' />
+      <simple-id uuid='{6C11C90E-6A17-4843-B91B-73304E6FC7E1}' />
+    </window>
+    <window class='dashboard' name='Referral Status Dashboard'>
+      <viewpoints>
+        <viewpoint name='Referral Status' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{79FD797B-23B8-4EDF-946F-EEF1F5846CAE}' />
+    </window>
+  </windows>
+</workbook>
